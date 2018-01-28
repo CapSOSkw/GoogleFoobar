@@ -16,3 +16,29 @@ Write a function called answer(data, n) that takes in a list of less than 100 in
 
 To provide a Python solution, edit solution.py
 To provide a Java solution, edit solution.java
+
+### Test Cases
+
+#### Test Case 1
+
+Inputs:
+
+    (int list) data = [1, 2, 3]
+
+    (int) n = 0
+
+Output:
+
+    (int list) []
+
+#### Test Case 2
+
+Inputs:
+
+    (int list) data = [1, 2, 2, 3, 3, 3, 4, 5, 5]
+
+    (int) n = 1
+
+Output:
+
+    (int list) [1, 4]
