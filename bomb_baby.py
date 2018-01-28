@@ -1,9 +1,11 @@
 def answer(M, F):
+    
     M, F = int(M), int(F)
     count = 0
 
     bigger, smaller = max(M, F), min(M, F)
     temp = 0
+    
     while 1:
         if bigger % smaller != 0:
             temp = smaller
@@ -13,7 +15,7 @@ def answer(M, F):
 
         else:
             temp = smaller
-            count = count + (bigger // smaller) -1
+            count = count + ((bigger // smaller) -1)
             smaller = bigger - smaller * (bigger // smaller -1)
             bigger = temp
 
