@@ -1,15 +1,12 @@
-from math import log2
-import pandas as pd
+from math import log2  # log2 for Python3, and log for Python2.
 
 def myanswer(n):
+    
     n = int(n)
-
-    # power = int(log2(n))
-    # print(power)
     res = 0
 
     while n != 1:
-        print(n)
+        # print(n)
 
         if n % 2 == 0:
             n /= 2
@@ -18,8 +15,8 @@ def myanswer(n):
             n -= 1
 
         else:
-            power = int(log2(n))
-            # print(power)
+            # power = int(log2(n))
+
             if (n + 1) % 4 == 0:
                 n += 1
 
