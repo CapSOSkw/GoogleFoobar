@@ -90,7 +90,7 @@ Output:
 
     (int) 4
 
-# =============================================
+# ======================================
 ## Find the Access Codes
 
 Time to solve: 96 hours.
@@ -126,7 +126,7 @@ Inputs:
 Output:
     (int) 3
     
-    
+# ==============================   
 ## Fuel Injection Perfection
 
 #### Description
