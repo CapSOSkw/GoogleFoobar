@@ -4,7 +4,7 @@
 
 Time to solve: 24 hours.
 
-### Description
+#### Description
 
 Commander Lambda's minions are upset! They're given the worst jobs on the whole space station, and some of them are starting to complain that even those worst jobs are being allocated unfairly. If you can fix this problem, it'll prove your chops to Commander Lambda so you can get promoted!
 
@@ -12,12 +12,12 @@ Minion's tasks are assigned by putting their ID numbers into a list, one time fo
 
 Write a function called answer(data, n) that takes in a list of less than 100 integers and a number n, and returns that same list but with all of the numbers that occur more than n times removed entirely. The returned list should retain the same ordering as the original list - you don't want to mix up those carefully planned shift rotations! For instance, if data was [5, 10, 15, 10, 7] and n was 1, answer(data, n ) would return the list [5, 15, 7] because 10 occurs twice, and was thus removed from the list entirely.
 
-### Languages
+#### Languages
 
 To provide a Python solution, edit solution.py
 To provide a Java solution, edit solution.java
 
-### Test Cases
+#### Test Cases
 
 #### Test Case 1
 
@@ -45,12 +45,12 @@ Output:
     
     
 
-###
-### En Route Salute
+
+## En Route Salute
 
 Time to solve: 72 hours.
 
-### Description
+#### Description
 
 Commander Lambda loves efficiency and hates anything that wastes time. She's a busy lamb, after all! She generously rewards henchmen who identify sources of inefficiency and come up with ways to remove them. You've spotted one such source, and you think solving it will help you build the reputation you need to get promoted.
 
@@ -63,12 +63,12 @@ Each hallway string will contain three different types of characters: '>', an em
 
 Write a function answer(s) which takes a string representing employees walking along a hallway and returns the number of times the employees will salute. s will contain at least 1 and at most 100 characters, each one of -, >, or <.
 
-### Languages
+#### Languages
 
 To provide a Python solution, edit solution.py
 To provide a Java solution, edit solution.java
 
-### Test Cases
+#### Test Cases
 
 #### Test Case 1
 
