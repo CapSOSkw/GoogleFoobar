@@ -20,10 +20,13 @@ def answer(data, n):
     if n == 0:
         return []
 
-    result = []
-    for i, j in enumerate(job_count):
-        if j <= n:
-            result.append(job_index[i])
+
+    result = [job_index[i] for i,j in enumerate(job_count) if j<=n]
+    
+#     result = []
+#     for i, j in enumerate(job_count):
+#         if j <= n:
+#             result.append(job_index[i])
 
     return result
 
