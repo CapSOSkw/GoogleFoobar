@@ -38,7 +38,7 @@ def pop_value(l, x, y):       #删除已经用过的数
     return l
 
 def value_with_combination(l, value):  # return which combination is created by value
-    return [i for i, j in enumerate(l) if j == value]  ## 返回由哪个数产生的组合的index
+    return [i for i, j in enumerate(l) if j == value]  #返回由哪个数产生的组合的index
 
 
 def answer(banana_list):
@@ -47,15 +47,17 @@ def answer(banana_list):
     count = 0
     banana_list = sorted(banana_list)
     
-    all_combinations = [[y for y in banana_list if inf_loop(x, y)] for x in banana_list]
+    all_combinations = [[y for y in banana_list if inf_loop(x, y)] for x in banana_list] 
+    #生成以一个值为基础，能与之搭配产生无限循环的组合
 
-    highest_priority = shortest_combination(all_combinations)
+    highest_priority = shortest_combination(all_combinations) #产生组合越少，越先处理。
 
     while len(highest_priority) and len(filter(lambda x: len(x) > 0, all_combinations)) > 1:
 
         base_value0 = banana_list[all_combinations.index(highest_priority)]
+        #得到产生最少组合的基础数
 
-        one_of_comb_value = highest_priority[0]
+        one_of_comb_value = highest_priority[0] #该组合中的第一个值
 
         for i in value_with_combination(banana_list, one_of_comb_value):
             if len(all_combinations[i]) != 0:
@@ -64,11 +66,11 @@ def answer(banana_list):
 
         del highest_priority[:]
 
-        all_combinations = map(lambda x: pop_value(x, base_value0, one_of_comb_value), all_combinations)
+        all_combinations = map(lambda x: pop_value(x, base_value0, one_of_comb_value), all_combinations) #删除用过的数
 
-        count += 2
+        count += 2 
 
-        highest_priority = shortest_combination(all_combinations)
+        highest_priority = shortest_combination(all_combinations) #重新找下一个形成最少组合的
 
     return length_banana - count
 
