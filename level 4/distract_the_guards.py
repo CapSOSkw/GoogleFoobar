@@ -14,13 +14,18 @@ def possible_comb(bananas):
             bigger, smaller = max(bananas[i], bananas[j]), min(bananas[i], bananas[j])
             quotient = bigger / smaller
 
-            if quotient in multipler and quotient * smaller == bigger:   #整数倍
+            if quotient in multipler and quotient * smaller == bigger:   #整数倍就跪了，ex. [1,3], [1,7]
                 continue
 
             else:
                 all_possibles.append([bananas[i], bananas[j]])
 
-    return all_possibles                          # 返还所有的可能性
+    return all_possibles                          # 返还所有的可能
     
     
-    # 怎么从所有可能中，找到最少会剩余的数
+    # 怎么从所有可能中，找到尽可能少的，用不到的数
+
+    
+    
+    
+    
