@@ -1,14 +1,12 @@
 test = [1,7,3,21,13,19]
 
-
 multipler = [1,3,7,15,31,63,127,255,511,1023,2047,4095,8191,16383,32767,
                  65535,131071,262143,524287,1048575,2097151,4194303,8388607,
                  16777215,33554431,67108863,134217727,268435455,536870911,1073741823]   # 2^n - 1
 
-
 def possible_comb(bananas):
-
-    all_possibles = []
+    all_possibles = []                           #创建变量存储所有可能
+    
     for i in range(len(bananas)):
         for j in range(i+1, len(bananas)):
             bigger, smaller = max(bananas[i], bananas[j]), min(bananas[i], bananas[j])
