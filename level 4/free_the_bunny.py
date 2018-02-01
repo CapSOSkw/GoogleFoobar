@@ -41,6 +41,7 @@ key_index   bunny_index
 通过排列组合， C(5,3)=10. 所以总共有10个组合分别对应key的index。 最后把key_index
 分别附给bunny， 根据bunny的index。 例， bunny_index=(0,1,2)对应key_inde=0，于是，
 0，1，2的bunny就得到0号key.
+意外地发现 itertools 里面的 combinations 可以直接算出组合。 就不用算阶乘，再根据数量算组合了。
 
 '''
 
