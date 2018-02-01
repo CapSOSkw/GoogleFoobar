@@ -25,33 +25,19 @@ pattern_dict = {
 def convert2int(l):
     return map(int, l)
 
-test = [True, False, True]
-d_test = convert2int(test)
-
-test2 = [False, True, False]
-d_test2 = convert2int(test2)
-
-
 def convert2combination(l):
     return list(map(lambda x,y: str(x)+str(y), l[:-1], l[1:]))
 
-result = []
-for i in range(len(d_test)-2):
-    for item in pattern_dict["Veritical"][convert2combination(d_test)[i]]:
-        latter = item[-1]
-        for j in pattern_dict["Veritical"][convert2combination(d_test)[i+1]]:
-            if j[0] == latter:
-                result.append(item + [j[1]])
+def match_start_end(tuple_list):
+    return tuple_list[0] + [tuple_list[-1][-1]] if tuple_list[0][-1] == tuple_list[-1][0] else None
 
+test = pattern_dict["Veritical"]["10"]
+test2 = pattern_dict["Veritical"]["11"]
 
-result2 = []
+combination = list(itertools.product(test, test2))
+# print combination
 
-for i in range(len(d_test2)-2):
-    for item in pattern_dict["Veritical"][convert2combination(d_test2)[i]]:
-        latter = item[-1]
-        for j in pattern_dict["Veritical"][convert2combination(d_test2)[i+1]]:
-            if j[0] == latter:
-                result2.append(item + [j[1]])
+temp = list(map(match_start_end, combination))
 
-for i in zip(test, test2):
-    print convert2combination(convert2int(i))
+temp2 = list(filter(lambda x: x != None, temp))
+print temp2
